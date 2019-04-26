@@ -1,0 +1,64 @@
+group Server
+    source https://api.nuget.org/v3/index.json
+    framework: netcoreapp2.2
+    storage: none
+
+    nuget FSharp.Core
+    nuget Giraffe
+    nuget Microsoft.AspNetCore
+    nuget Microsoft.AspNetCore.StaticFiles
+    nuget Microsoft.AspNetCore.WebSockets
+    nuget Microsoft.Extensions.Configuration
+    nuget Thoth.Json.Giraffe
+
+group Client
+    source https://api.nuget.org/v3/index.json
+    framework: netstandard2.0
+    storage: none
+
+    nuget Fable.Core ~> 2
+    nuget Fable.Elmish ~> 2
+    nuget Fable.Elmish.Debugger ~> 2
+    nuget Fable.Elmish.React ~> 2
+    nuget Fable.Elmish.HMR ~> 2
+    nuget Fable.React ~> 4
+    nuget Fulma
+    nuget Fable.FontAwesome.Free
+    nuget Thoth.Elmish.FormBuilder
+    nuget Thoth.Elmish.FormBuilder.BasicFields
+
+group Entity
+    storage none
+    source https://www.nuget.org/api/v2
+    framework netcoreapp2.2
+
+    nuget Microsoft.EntityFrameworkCore.Tools
+    nuget Microsoft.EntityFrameworkCore.Design
+    nuget Microsoft.EntityFrameworkCore.Relational
+    nuget Microsoft.EntityFrameworkCore.SqlServer
+    nuget Npgsql.EntityFrameworkCore.PostgreSQL
+
+group Tests
+    storage none
+    source https://www.nuget.org/api/v2
+    framework netcoreapp2.2
+
+    nuget FSharp.Core
+    nuget Expecto
+    nuget Expecto.BenchmarkDotNet
+    nuget Expecto.FsCheck
+    nuget Expecto.Hopac
+    nuget canopy
+    nuget Selenium.WebDriver.ChromeDriver
+
+group Build
+    source https://api.nuget.org/v3/index.json
+    framework: netstandard2.0
+    storage: none
+
+    clitool dotnet-fake
+    nuget FSharp.Core 4.3.4 // https://github.com/fsharp/FAKE/issues/2001
+    nuget Fake.Core.Target
+    nuget Fake.DotNet.Cli
+    nuget Fake.IO.FileSystem
+

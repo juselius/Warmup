@@ -1,0 +1,7 @@
+FROM mcr.microsoft.com/dotnet/core/aspnet:2.2
+WORKDIR /app
+ENV PRODUCTION 1
+ENV SERVER_PORT 80
+COPY ./deploy .
+CMD dotnet ./Server.dll
+

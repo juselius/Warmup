@@ -1,0 +1,9 @@
+<html>
+    <body>
+    <script>
+        var ws = new WebSocket("ws://localhost:8085/ws");
+        ws.onopen = function (ev) { console.log(ev); };
+        ws.onerror = function (ev) { console.log(ev); };
+    </script>
+    </body>
+</html>
